@@ -1,0 +1,17 @@
+
+.navbar {
+ 
+    .navbar__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+.content {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 100px;
+}
+.heart{
+    color: hsl(330 100% 50%);
+}

@@ -1,0 +1,5 @@
+<p>new-parents-example-1 works!</p>
+<button (click)="parentsUpdateSignal()">this.objectForInput.set( &#123; value: ' update signal'  &#125;)</button>
+ 
+        <h3>{{objectForInput().value}} </h3>
+      <app-new-child-example-1 [objectForInput]="objectForInput()"/>

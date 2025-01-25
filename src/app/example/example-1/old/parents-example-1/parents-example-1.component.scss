@@ -1,0 +1,15 @@
+.parents {
+    display: flex;
+    border: 2px solid lightblue;
+    justify-content: space-evenly;
+    margin: 100px;
+    .content {
+        margin: 25px;
+        .button-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+    }
+}

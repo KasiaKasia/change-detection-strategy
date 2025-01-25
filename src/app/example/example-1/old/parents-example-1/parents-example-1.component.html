@@ -1,0 +1,15 @@
+<div class="parents">
+    <div class="content">
+        <p>Parents component</p>
+        <div class="button-container">
+            <button (click)="default()">Enable the ChangeDetectionStrategy.Default optiont</button>
+            <button (click)="onPush()">Enable the ChangeDetectionStrategy.OnPush</button>
+        </div>
+        <div class="button-container">
+            <button (click)="assingningANewObjectPARENTS()">The reference changes, the memory address is updated. The variable points to a new instance of the object. (PARENTS)</button>
+            <button (click)="modifyingThePropertiesOfAnExistingObjectPARENTS()">The reference and memory address do NOT change. Only the property within the object is modified. (PARENTS)</button>
+        </div>
+        <h3>{{parentObject.value}}</h3>
+        <app-child-example-1 [childObject]="parentObject" />
+    </div>
+</div>

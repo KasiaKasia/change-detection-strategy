@@ -1,0 +1,41 @@
+<div class="navbar">
+  <div class="navbar__wrapper">
+      <div class="navbar__section">
+          <div>
+              <a class="navbar__routerLink" [routerLink]="'/'" name=''>Description</a>
+          </div>
+      </div>
+      <div class="navbar__section">
+          <div>
+              <a class="navbar__routerLink" [routerLink]="'/example/one'" name='one'>Example 1</a>
+          </div>
+      </div>
+      <div class="navbar__section">
+          <div>
+              <a class="navbar__routerLink" [routerLink]="'/example/second'" name='second'>Example 2</a>
+          </div>
+      </div>
+      <div class="navbar__section">
+          <div>
+              <a class="navbar__routerLink" [routerLink]="'/example/third'" name='third'>Example 3</a>
+          </div>
+      </div>
+  </div>
+</div>
+ 
+ 
+    <div class="content">
+
+<p>Główne cechy ChangeDetectionStrategy:</p>
+<div> <p> Domyślne zachowanie ChangeDetectionStrategy.Default:</p></div>
+
+<div> <span class="heart">&#9829;</span> Angular automatycznie sprawdza zmiany w komponencie oraz wszystkich jego podkomponentach przy każdym cyklu detekcji zmian.</div>
+<div> <span class="heart">&#9829;</span> Zmiany są sprawdzane nawet wtedy, gdy nie nastąpiła żadna zmiana w danych.</div>
+<div> <p> Zachowanie ChangeDetectionStrategy.OnPush:</p></div>
+
+<div> <span class="heart">&#9829;</span> Angular sprawdza zmiany w komponencie tylko w określonych sytuacjach, takich jak:</div>
+<div> <span class="heart">&#9829;</span><span class="heart">&#9829;</span>  Zmiana wejściowych danych (&#64;Input) — tylko gdy zmieni się referencja obiektu/zmiennej.</div>
+<div> <span class="heart">&#9829;</span><span class="heart">&#9829;</span>  Własna akcja w komponencie — np. kliknięcie przycisku lub wywołanie metody, które ręcznie uruchamiają detekcję zmian (markForCheck, detectChanges).</div>
+<div> <span class="heart">&#9829;</span> Podkomponenty nie są automatycznie sprawdzane, jeśli komponent rodzica jest oznaczony jako "czysty" i nie zmieniły się jego wejściowe dane.</div>
+</div> 
+<router-outlet />
