@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { ObjectForInput } from '../new-parents-example-1/new-parents-example-1.component';
+import { ChangeDetectionStrategy, Component, computed, effect, inject, input } from '@angular/core';
+import { NewParentsExample1Component, ObjectForInput } from '../new-parents-example-1/new-parents-example-1.component';
 
 @Component({
   selector: 'app-new-child-example-1',
@@ -10,5 +10,10 @@ import { ObjectForInput } from '../new-parents-example-1/new-parents-example-1.c
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class NewChildExample1Component {
-  objectForInput = input.required<ObjectForInput>();
+  objectForInput = input<ObjectForInput>();
+  newParentsExample1Component = inject(NewParentsExample1Component)
+  
+  childUpdateSignal() {
+    this.newParentsExample1Component.objectForInput.set({ value: 'child', component: 'Child' });
+  }
 }

@@ -1,2 +1,4 @@
 <p>new-child-example-1 works!</p>
-<h3>{{objectForInput().value}} </h3>
+<h3>{{objectForInput()?.value}} </h3>
+
+<button (click)="childUpdateSignal()">this.objectForInput.set( &#123; value: ' update signal' &#125;)</button>
